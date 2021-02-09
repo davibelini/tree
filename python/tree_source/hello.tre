@@ -1,0 +1,4 @@
+branch main ~
+  dump "Hello, World!"
+  cut
+crash
