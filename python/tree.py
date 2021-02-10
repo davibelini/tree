@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from lexer import Lexer
 
 def main():
@@ -6,7 +8,7 @@ def main():
     lexer = Lexer(f.readlines())
 
     print("TOKENS:")
-    print(lexer.tokens, "\n")
+    pprint(lexer.tokens)
 
 if __name__ == "__main__":
     main()

@@ -8,6 +8,7 @@ class Lexer:
             "cut",
             "crash"
         ]
+        self.tokenize()
 
     def tokenize(self):
         for line in self.data:
@@ -41,4 +42,4 @@ class Lexer:
                 elif c in " " and tmp_id != "string":
                     continue
                 else:
-                    tmp.append(l)
+                    tmp.append(c)
