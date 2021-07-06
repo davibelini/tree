@@ -1,4 +1,3 @@
 branch main ~
-  dump "Hello, World!"
+  dump "Hello, World!".
   cut
-crash

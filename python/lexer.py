@@ -16,10 +16,10 @@ class Lexer:
             tmp_id = ""
 
             for c in line:
-                if c == "\"" and tmp_id == "":
-                    tmp_id  = "string"
+                if c == '"' and tmp_id == "":
+                    tmp_id  = "char"
                     tmp     = []
-                elif c == "\"" and tmp_id == "string":
+                elif c == '"' and tmp_id == "char":
                     self.tokens.append({
                         "id": tmp_id,
                         "value": ''.join(tmp)
@@ -39,7 +39,7 @@ class Lexer:
                         "value": "".join(tmp)
                     })
                     tmp = []
-                elif c in " " and tmp_id != "string":
+                elif c in " \n\t" and tmp_id != "char":
                     continue
                 else:
                     tmp.append(c)
